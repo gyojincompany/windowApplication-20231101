@@ -14,6 +14,21 @@ class MyWin(QMainWindow, form_class):
         self.setWindowTitle('연습 프로그램') # 윈도우 타이틀
         self.setWindowIcon(QIcon('img/google.png')) # 윈도우 아이콘
 
+        self.btn1.clicked.connect(self.btn1_clicked)  # 버튼1이 클릭되면 메서드 btn1_clicked 호출
+        self.btn2.clicked.connect(self.btn2_clicked)  # 버튼2이 클릭되면 메서드 btn2_clicked 호출
+        self.btn3.clicked.connect(self.btn3_clicked)  # 버튼3이 클릭되면 메서드 btn3_clicked 호출
+
+
+    def btn1_clicked(self):  # 버튼1번이 클릭되었을때 실행될 메서드
+        print("버튼1번이 클릭되었습니다!!")
+
+    def btn2_clicked(self):  # 버튼2번이 클릭되었을때 실행될 메서드
+        print("버튼2번이 클릭되었습니다!!")
+
+    def btn3_clicked(self):
+        user_text = self.lineEdit.text()  # 사용자가 입력한 텍스트 가져오기
+        print(user_text)
+
 
 
 if __name__ == '__main__':

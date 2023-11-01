@@ -32,5 +32,4 @@ if __name__ == '__main__':
     ex = MyWin()
 
     ex.show()
-
     sys.exit(app.exec_())
