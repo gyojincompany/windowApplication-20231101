@@ -17,6 +17,8 @@ class MyWin(QMainWindow, form_class):
         self.btn1.clicked.connect(self.btn1_clicked)  # 버튼1이 클릭되면 메서드 btn1_clicked 호출
         self.btn2.clicked.connect(self.btn2_clicked)  # 버튼2이 클릭되면 메서드 btn2_clicked 호출
         self.btn3.clicked.connect(self.btn3_clicked)  # 버튼3이 클릭되면 메서드 btn3_clicked 호출
+        self.btn4.clicked.connect(self.btn4_clicked)  # 버튼4이 클릭되면 메서드 btn4_clicked 호출
+
 
         self.lineEdit.textChanged.connect(self.changePrint)
         # lineEdit에 텍스트가 변경될 때마다 changePrint 함수가 실행
@@ -24,14 +26,21 @@ class MyWin(QMainWindow, form_class):
         # lineEdit에 텍스트가 입력 중(lineEdit가 선택 중)에 엔터키가 클릭되면 changePrint 함수가 실행
 
     def btn1_clicked(self):  # 버튼1번이 클릭되었을때 실행될 메서드
-        print("버튼1번이 클릭되었습니다!!")
+        # print("버튼1번이 클릭되었습니다!!")
+        self.lineEdit.setText("버튼1번이 클릭되었습니다!!")
+        # lineEdit에 setText() 가로 안의 문자열이 출력됨
 
     def btn2_clicked(self):  # 버튼2번이 클릭되었을때 실행될 메서드
-        print("버튼2번이 클릭되었습니다!!")
+        # print("버튼2번이 클릭되었습니다!!")
+        self.textEdit.append("버튼2번이 클릭되었습니다!!")
 
     def btn3_clicked(self):
         user_text = self.lineEdit.text()  # 사용자가 입력한 텍스트 가져오기
         print(user_text)
+
+    def btn4_clicked(self):
+        user_intro = self.textEdit.toPlainText()  # 사용자가 textEdit 입력한 텍스트 가져오기
+        print(user_intro)
 
     def changePrint(self):
         user_text = self.lineEdit.text()  # 사용자가 입력한 텍스트 가져오기
