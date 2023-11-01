@@ -18,6 +18,7 @@ class MyWin(QMainWindow, form_class):
         self.btn2.clicked.connect(self.btn2_clicked)  # 버튼2이 클릭되면 메서드 btn2_clicked 호출
         self.btn3.clicked.connect(self.btn3_clicked)  # 버튼3이 클릭되면 메서드 btn3_clicked 호출
         self.btn4.clicked.connect(self.btn4_clicked)  # 버튼4이 클릭되면 메서드 btn4_clicked 호출
+        self.init_btn.clicked.connect(self.init)  # RESET이 클릭되면 메서드 init 호출
 
 
         self.lineEdit.textChanged.connect(self.changePrint)
@@ -46,6 +47,8 @@ class MyWin(QMainWindow, form_class):
         user_text = self.lineEdit.text()  # 사용자가 입력한 텍스트 가져오기
         print(user_text)
 
+    def init(self):
+        self.textEdit.clear()
 
 
 if __name__ == '__main__':

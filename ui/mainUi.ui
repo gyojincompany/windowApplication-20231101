@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>593</height>
+    <height>635</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -201,6 +201,19 @@
     </property>
     <property name="text">
      <string>자기소개출력</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="init_btn">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>520</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RESET</string>
     </property>
    </widget>
   </widget>
